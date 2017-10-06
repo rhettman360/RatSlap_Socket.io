@@ -3,6 +3,8 @@ var session = require('express-session')
 var path = require("path")
 var app = express()
 var bodyParser = require('body-parser');
+var Game = require('game.js');
+var Card = require('card.js');
 var PORT = 8000
 
 app.use(session({secret: 'codingdojorocks'}));  // string for encryption
