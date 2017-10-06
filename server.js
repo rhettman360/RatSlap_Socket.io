@@ -9,6 +9,7 @@ app.use(session({secret: 'codingdojorocks'}));  // string for encryption
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({extended: true}));
 app.use(express.static(path.join(__dirname, "./client")))
+app.set("views", path.join(__dirname, "./client/views"))
 app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname, "./node_modules")))
 const server = app.listen(PORT, () =>{
